@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global and Local Variables in CSS</title>
+    <style>
+        /* Global variable defined in :root */
+        :root {
+            --main-bg-color: lightblue;
+            --text-color: darkblue;
+        }
+
+        /* Applying the global variables */
+        body {
+            background-color: var(--main-bg-color);
+            color: var(--text);
+            font-family: Arial, sans-serif;
+        }
+
+        /* Local variable scoped to this section */
+        .highlight {
+            
+         /* Local variable overriding global one */
+            color: var(--text-color);
+            background-color: yellow;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Global and Local CSS Variables</h1>
+
+    <p>This text uses global variables for the background and text color.</p>
+
+    <div class="highlight">
+        This text uses a **local** variable for the text color (red) and ignores the global one.
+    </div>
+
+</body>
+</html>
